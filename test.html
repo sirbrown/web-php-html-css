@@ -1,0 +1,53 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns=http://www.w3.org/1999/xhtml">
+
+<head>
+  <title>Title of document</title>
+  <style type="text/css">
+      #holder { /*az ajtó képét háttérként tartalmazó div*/
+          background-image: url("door.jpg");
+          width: 468px;
+          height: 1000px;
+          top: 150px;
+          left: 300px;
+          position: relative;
+      }
+      #layer { /*az ajtóvel megegyezõ méretben egy újabb div, a hover-hez kell*/
+          position: absolute;
+          top: 0px;
+          width: 100%;
+          height: 100%;
+      }
+      #layer:hover, #layer2:hover { /*a hover alatti mûködés*/
+          background-color: red;
+          opacity: 0.5;
+          color: black;
+      }
+      
+      #layer2 { /*a betû háttere alaphelyzetben, a color átadódik a span tag-nak*/
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          color: red;
+          z-index: 1;
+          background-color: black;
+          text-align: center;
+          opacity: 0.5;
+      }
+      
+      span { /* a betütípus és méret meghatározása */
+          font-size: 28pt;
+          position: absolute;
+          top: 20%;
+      }
+
+  </style>
+</head>
+
+<body>
+    <div id="holder" ><div id="layer"></div><div id="layer2"><span>3</span></div></div>
+</body>
+
+</html>
